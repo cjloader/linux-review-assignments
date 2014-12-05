@@ -1,4 +1,4 @@
-#!/bin/sed
+#!/bin/sh
 
 sed -i '/addgroup comp.os.linux.announce*/addgroup comp.os.linux.announce m/'
 sed -i '/addgroup comp.arch*/addgroup comp.arch y'
