@@ -1,4 +1,4 @@
-!#/bin/sh
+#!/bin/sh
 
 #search and replace
 sed 's/\/\verb+\+/g' *.1 > sample.tex
