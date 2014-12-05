@@ -1,23 +1,23 @@
 #!/bin/sh
 
 #search and replace
-sed 's/\/\verb+\+/g' *.1 > sample.tex
-sed 's/%/\%/g' sample.tex
-sed 's/^/\^/g' sample.tex
-sed 's/\/-\hspace{.01cm}-/g' sample.tex
+sed 's/\/\verb+\+/g'
+sed 's/%/\%/g'
+sed 's/^/\^/g'
+sed 's/\/-\hspace{.01cm}-/g'
 
 #add text to beginning and end
-sed '1i/\documentstyle[11pt]{article}' sample.tex
-sed '2i/\begin{document}' sample.tex
-sed '$a/\end{document}' sample.tex
+sed '1i/\documentstyle[11pt]{article}'
+sed '2i/\begin{document}'
+sed '$a/\end{document}'
 
 #center first line of ascii file
-sed '3i/\begin{center} {\bf' sample.tex
-sed '4i/} \end{center}' sample.tex
+sed '3i/\begin{center} {\bf'
+sed '4i/} \end{center}'
 
 #descriptions
-sed '5,$a-1i/^/\begin{description} \item[' sample.tex
-sed '5,$a-1i/$/ ] \end{description}' sample.tex
+sed '5,$a-1i/^/\begin{description} \item[' 
+sed '5,$a-1i/$/ ] \end{description}'
 
 #remove first non-blank characters
-sed 's/^[+|-]//g' sample.tex
+sed 's/^[+|-]//g'
